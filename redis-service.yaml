@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metedata:
+ name: redis-service
+ labels:
+  name: redis-service
+  author: hbc
+spec:
+ ports:
+ - targetPort: 6379
+   port: 6379
+  selector:
+   matchLabels:
+    type: redis-pod
